@@ -1,0 +1,20 @@
+The map $L_{\mathfrak{B}}: V \to \reals^d$ is bijective.
+
+\begin{proof}
+    We describe the inverse of $L_{\mathfrak{B}}$: the map sending $\begin{bmatrix}a_1\\\vdots\\a_n\end{bmatrix}$ to $a_1v_1+\cdots+a_nv_n.$ Since $L_{\mathfrak{B}}$ has an inverse, $L_{\mathfrak{B}}$ is bijective.
+\end{proof}
+
+The map $L_{\mathfrak{B}}: V \to \reals^d$ is linear.
+
+\begin{proof}
+    Since $\mathcal{B}$ is a basis for $V,$ any $v\in\im\,T\subset V$ can be written uniquely as a linear combination of $v_1,\dots,v_n.$
+    Then for arbitrary, $v,w\in V,$ we have $$v=a_1v_1+\dots+a_nv_n\quad\text{and}\quad w=b_1v_1+\dots+b_nv_n$$ for some $a_i,b_i\in\reals.$
+    Then $$v+w=(a_1+b_1)v_1+\dots+(a_n+b_n)v_n,$$ and this says exactly that $L_\mathcal{B}(v) + L_\mathcal{B}(w) = L_\mathcal{B}(v+w).$ Thus $L_{\mathfrak{B}}$ respects addition.
+    Moreover, $$kv = k(a_1v_1+\dots+a_nv_n)=(ka_1)v_1+\dots+(ka_n)v_n,$$ which says exactly that $kL_\mathcal{B}(v)=L_\mathcal{B}(kv).$ Thus $L_{\mathfrak{B}}$ respects scalar multiplication. Because $f$ respects addition and scalar multiplication, $f$ is linear.
+\end{proof}
+
+The map $L_{\mathfrak{B}}: V \to \reals^d$ is an isomorphism.
+
+\begin{proof}
+    $L_{\mathfrak{B}}$ is an isomorphism as it is bijective and linear, from above.
+\end{proof}

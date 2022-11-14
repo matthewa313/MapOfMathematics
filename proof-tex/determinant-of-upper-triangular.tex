@@ -1,0 +1,22 @@
+\begin{proof}
+    We induce on $n.$ In the base case, $A_1$ is a $1\times 1$ matrix, i.e. $A=\begin{matrix}a\end{matrix}.$ Then our inductive hypothesis is that the determinant of $n\times n$ triangular matrix $A_n$ is the product of its diagonals: $$\det(A_n) = \prod\limits_{i=1}^{n} a_{ii}.$$ We want to show that the determinant of an $(n+1)\times(n+1)$ upper triangular matrix $A_{n+1}$ is the product of its diagonals. From Laplace Expansion:
+    \begin{align*}
+        \det(A_{n+1}) &= \det\begin{bmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n} & a_{1,n+1} \\
+        0 & a_{22} & \cdots & a_{2n} & a_{2,n+1} \\
+        \vdots & \vdots & \ddots & \vdots & \vdots \\
+        0 & 0 & \cdots & a_{nn} & a_{n,n+1} \\
+        0 & 0 & \cdots & 0 & a_{n+1,n+1} \\
+        \end{bmatrix} \\
+        &= a_{n+1,n+1}\det\begin{bmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n} \\
+        0 & a_{22} & \cdots & a_{2n} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        0 & 0 & \cdots & a_{nn} \\
+        \end{bmatrix} \\
+        &= a_{n+1,n+1}\det(A_n) \\
+        &= a_{n+1,n+1}\prod\limits_{i=1}^{n} a_{ii} \\
+        &= \prod\limits_{i=1}^{n+1} a_{ii}
+    \end{align*}
+    Thus, the determinant of an $(n+1)\times(n+1)$ upper triangular matrix is the product of its diagonals, and the proof follows from the principle of mathematical induction.
+  \end{proof}

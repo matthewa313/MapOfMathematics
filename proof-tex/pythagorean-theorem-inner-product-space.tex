@@ -1,0 +1,12 @@
+\begin{proof}
+    ($\implies$) As $v\perp w,$ $\ip{v,w}=\ip{w,v}=0.$ Applying this and the bilinearity of the inner product, we have $$\norm{v+w}^2 = \ip{v+w,v+w} = \ip{v,v} + \ip{v,w} + \ip{w,v} + \ip{w,w} = \norm{v}^2 + \norm{w}^2.$$
+
+    ($\impliedby$) Since $\norm{v+w}^2 = \norm{v}^2 + \norm{w}^2$ and applying the inner product's symmetry:
+    \begin{align*}
+        \norm{v}^2 + \norm{w}^2 - \norm{v+w}^2 &= 0 \\
+        \ip{v,v} + \ip{w,w} - \left(\ip{v,v} + 2\ip{v,w} + \ip{w,w}\right) &= 0 \\
+        -2\ip{v,w} &= 0 \\
+        \ip{v,w} &= 0
+    \end{align*}
+    Therefore, $v\perp w.$
+\end{proof}
