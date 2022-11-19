@@ -1,12 +1,17 @@
 import networkx as nx
 import json
+import os
+import glob
 
 G = nx.Graph()
 
 fin = open('./nodes/math.json')
 data = json.load(fin)
 
-fout = open('graph.graphml', 'w')
+for f in glob.glob('map/.*'):
+    os.remove(f)
+
+fout = open('map/map.graphml', 'w')
 
 
 fout.write('<?xml version="1.0" encoding="UTF-8" standalone="no"?>')
@@ -97,11 +102,15 @@ edge_text = """\n<edge id="e{id}" source="{source}" target="{target}">
 
 id = 1
 for node in data:
+    if 'hide' in data[node] and data[node]['hide']:
+        continue
     fout.write(node_text.format(
-        node=node, height=data[node]["height"]*12, width=data[node]["width"]*12, id=id))
+        node=node, height=data[node]["height"]*12, width=32.5*12, id=id))
     id += 1
 
 for node in data:
+    if 'hide' in data[node] and data[node]['hide']:
+        continue
     if ('proofs' not in data[node]):
         continue
     for proof in data[node]['proofs']:
@@ -111,6 +120,8 @@ for node in data:
         fout.write(proof_node_text.format(name=name, link=link))
 
 for node in data:
+    if 'hide' in data[node] and data[node]['hide']:
+        continue
     if ('defs' not in data[node]):
         continue
     for defin in data[node]['defs']:
@@ -121,6 +132,8 @@ for node in data:
 
 id = 0
 for node in data:
+    if 'hide' in data[node] and data[node]['hide']:
+        continue
     if ('proofs' not in data[node]):
         continue
     for proof in data[node]['proofs']:
@@ -135,6 +148,8 @@ for node in data:
         id += 1
 
 for node in data:
+    if 'hide' in data[node] and data[node]['hide']:
+        continue
     if ('defs' not in data[node]):
         continue
     for defin in data[node]['defs']:

@@ -171,6 +171,7 @@ def main():
         print(exc.output.decode('utf-8'))
         print(exc.stderr.decode('utf-8'))
         sys.exit(exc.returncode)
+        raise RuntimeError('latex failed')
 
 
 if __name__ == '__main__':

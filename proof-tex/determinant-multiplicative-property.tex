@@ -1,0 +1,18 @@
+\begin{proof}
+    There are two cases: (1) $\det(A) = 0$ or $\det(B)=0$, or (2) $\det(A)\neq 0$ and $\det(B)\neq 0$.
+    
+    In the first case, at least one of $A$ or $B$ is not invertible. Thus $AB$ is not invertible, so $\det(AB) = 0.$ Thus $\det(AB) = \det(A)\det(B)$.
+
+    In the second case, $A$ and $B$ are invertible. Therefore, $A=E_m\cdots E_n$ and $B=E_p\cdots E_q$ for elementary matrices $E_i.$ Then $AB=E_m\cdots E_nE_p\cdots E_q,$ so
+    \begin{align*}
+        \det(AB) &= \det(E_m\cdots E_nE_p\cdots E_q) \\
+        &= \det(E_m)\det(E_{m+1}\cdots E_nE_p\cdots E_q) \\
+        &= \cdots \\
+        &= \det(E_m)\cdots\det(E_n)\det(E_p)\cdots\det(E_q) \\
+        &= \det(E_mE_{m+1})\cdots\det(E_n)\det(E_pE_{p+1})\cdots\det(E_q) \\
+        &= \cdots \\
+        &= \det(E_m\cdots E_n)\det(E_p\cdots E_q) \\
+        &= \det(A)\det(B).
+    \end{align*}
+    Thus in both cases $\det(AB) = \det(A)\det(B),$ as desired.
+\end{proof}
