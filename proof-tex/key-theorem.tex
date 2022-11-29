@@ -1,0 +1,12 @@
+\begin{proof}
+    Take $$\vec{x} = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}$$ from the source $\reals^m.$ Write $$\vec{x} = x_1\vec{e}_1 + x_2\vec{e}_2 + \cdots + x_n\vec{e}_m$$ where $\vec{e}_i$ is the $i$th standard unit column vector. Applying $T$ and using the fact that $T$ is linear, we have
+    \begin{align*}
+        T(\vec{x}) &= T(x_1\vec{e}_1 + x_2\vec{e}_2 + \cdots + x_n\vec{e}_m) \\
+        &= T(x_1\vec{e}_1) + T(x_2\vec{e}_2) + \cdots + T(x_n\vec{e}_m) \\
+        &= x_1T(\vec{e}_1) + x_2T(\vec{e}_2) + \cdots + x_nT(\vec{e}_m) \\
+        &= \begin{bmatrix} T(\vec{e}_1) & T(\vec{e}_2) & \cdots & T(\vec{e}_m) \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}.
+    \end{align*}
+    Thus for any vector $\vec{x},$ we have $T(\vec{x})=A\vec{x},$ where $A$ is the matrix defined in the theorem.
+
+    Nowe we show that $A$ is unique. Suppose for contradiction that some other matrix $B$ satisfies $T(\vec{x})=B\vec{x}.$ Then for all vectors $\vec{x}\in\reals^m,$ we have $A\vec{x}=B\vec{x}.$ In particular, taking $\vec{x}=\vec{e}_j,$ we have $A\vec{e}_j=B\vec{e}_j.$ Thus $A\vec{e}_j=B\vec{e}_j$ for all $j=1,2,\ldots,n.$ But this means that $A$ and $B$ are the same matrix. This is a contradiction, so $A$ is unique.
+\end{proof}

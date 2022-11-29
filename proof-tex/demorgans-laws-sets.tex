@@ -1,0 +1,39 @@
+First we prove that $(A\cup B)^\complement = A^\complement \cap B^\complement.$
+
+\begin{proof}
+    Choose $x \in (A\cup B)^\complement.$
+    Then $x \notin A\cup B.$
+    So $x \notin A$ and $x \notin B.$
+    So $x \in A^\complement$ and $x \in B^\complement.$
+    So $x \in A^\complement \cap B^\complement.$
+    So $(A\cup B)^\complement \subseteq A^\complement \cap B^\complement.$
+
+    Now choose $x \in A^\complement \cap B^\complement.$
+    Then $x \in A^\complement$ and $x \in B^\complement.$
+    So $x \notin A$ and $x \notin B.$
+    So $x \notin A\cup B.$
+    So $x \in (A\cup B)^\complement.$
+    So $A^\complement \cap B^\complement \subseteq (A\cup B)^\complement.$
+
+    Therefore, $(A\cup B)^\complement = A^\complement \cap B^\complement.$
+\end{proof}
+
+Next we prove that $(A\cap B)^\complement = A^\complement \cup B^\complement.$
+
+\begin{proof}
+    Choose $x \in (A\cap B)^\complement.$
+    Then $x \notin A\cap B.$
+    So $x \notin A$ or $x \notin B.$
+    So $x \in A^\complement$ or $x \in B^\complement.$
+    So $x \in A^\complement \cup B^\complement.$
+    So $(A\cap B)^\complement \subseteq A^\complement \cup B^\complement.$
+
+    Choose $x \in A^\complement \cup B^\complement.$
+    Then $x \in A^\complement$ or $x \in B^\complement.$
+    So $x \notin A$ or $x \notin B.$
+    So $x \notin A\cap B.$
+    So $x \in (A\cap B)^\complement.$
+    So $A^\complement \cup B^\complement \subseteq (A\cap B)^\complement.$
+
+    Therefore, $(A\cap B)^\complement = A^\complement \cup B^\complement.$
+\end{proof}
