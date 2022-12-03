@@ -1,7 +1,7 @@
 We begin by proving that the determinant of an upper triangular matrix is as prescribed.
 
 \begin{proof}
-    We induce on $n.$ In the base case, $A_1$ is a $1\times 1$ matrix, i.e. $A=\begin{matrix}a\end{matrix}.$ Then our inductive hypothesis is that the determinant of $n\times n$ triangular matrix $A_n$ is the product of its diagonals: $$\det(A_n) = \prod\limits_{i=1}^{n} a_{ii}.$$ We want to show that the determinant of an $(n+1)\times(n+1)$ upper triangular matrix $A_{n+1}$ is the product of its diagonals. From Laplace Expansion:
+    We induction on $n.$ In the base case, $A_1$ is a $1\times 1$ matrix, i.e. $A=\begin{matrix}a\end{matrix},$ and $\det\begin{matrix}a\end{matrix} = a,$ so the theorem holds in the base case. Then our inductive hypothesis is that the determinant of $n\times n$ triangular matrix $A_n$ is the product of its diagonals: $$\det(A_n) = \prod\limits_{i=1}^{n} a_{ii}.$$ We want to show that the determinant of an $(n+1)\times(n+1)$ upper triangular matrix $A_{n+1}$ is the product of its diagonals. From Laplace Expansion:
     \begin{align*}
         \det(A_{n+1}) &= \det\begin{bmatrix}
         a_{11} & a_{12} & \cdots & a_{1n} & a_{1,n+1} \\

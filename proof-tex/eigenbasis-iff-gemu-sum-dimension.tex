@@ -1,0 +1,7 @@
+Let $T:V\\to V$ be a linear transformation, where $V$ is an $n$-dimensional vector space. $T$ has an eigenbasis if and only if the sum of the geometric multiplicities of its eigenvalues equals $n.$
+
+\begin{proof}
+    ($\implies$) Suppose $T$ has an eigenbasis. We partition the vectors in the eigenbasis into $m$ sets depending on their respective eigenvalues. These partitioned sets must be linearly independent as they are subsets of the eigenbasis. Thus, for a set with a given eigenvalue $\lambda,$ it has at most $\gemu(\lambda)$ vectors. We also know that the eigenbasis has $n$ vectors in it, and the total number of vectors in each partition must sum to $n.$ Thus $\sum_{\forall \lambda} \gemu(\lambda) = n.$
+    
+    ($\impliedby$) Suppose $\sum_{\forall \lambda} \gemu(\lambda) = n.$ Note that $\gemu(\lambda)$ is the number of vectors in the basis of the eigenspace of $\lambda.$ The union of all such bases has $n$ elements, and because the union of bases for distinct eigenspaces is linearly independent, the union of all bases represents a basis for $T.$ Thus $T$ has an eigenbasis.
+\end{proof}

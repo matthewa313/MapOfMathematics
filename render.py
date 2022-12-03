@@ -157,7 +157,7 @@ def write_nodes(fout) -> None:
 
 
 def write_proof(fout, name: str) -> None:
-    link = '../proof-pdf/' + name + '.pdf'
+    link = os.getcwd() + '/proof-pdf/' + name + '.pdf'
     fout.write(graphml_proof.format(name=name, link=link))
 
 
